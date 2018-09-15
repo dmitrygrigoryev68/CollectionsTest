@@ -42,7 +42,7 @@ public class app {
         }
 
         System.out.println("\n");
-        Iterator<Integer> myPrinter4 = c.notMoreThanNum(14, listInt3).iterator();
+        Iterator<Integer> myPrinter4 = c.notBiggerThanNum(14, listInt3).iterator();
         while (myPrinter4.hasNext()) {
             System.out.println(myPrinter4.next());
         }

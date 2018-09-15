@@ -33,7 +33,7 @@ public class Collection {
         return list;
     }
 
-    public List<Integer> notMoreThanNum(int num, List<Integer> list) {
+    public List<Integer> notBiggerThanNum(int num, List<Integer> list) {
         Iterator<Integer> itr = list.iterator();
         while (itr.hasNext()) {
             Integer s = itr.next();
