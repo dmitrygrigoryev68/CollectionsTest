@@ -12,16 +12,15 @@ public class Collection {
     }
 
     public List<String> checkNames(List<String> listNames) {
-        for (int i = 0; i < listNames.size(); i++) {
-            if (listNames.get(i).length() == 4) {
-                listNames.remove(listNames.get(i));
-            }
+        Iterator<String> itr = listNames.iterator();
+        while (itr.hasNext()) {
+            String s = itr.next();
+            if (s.length() == 4) itr.remove();
         }
         return listNames;
     }
 
     public boolean checkListsCircle(List<String> l1, List<String> l2) {
-
         for (int i = 0; i < l1.size(); i++) {
             Collections.rotate(l1, 1);
             if (l2.equals(l1)) return true;
@@ -42,6 +41,5 @@ public class Collection {
         }
         return list;
     }
-
 }
 
