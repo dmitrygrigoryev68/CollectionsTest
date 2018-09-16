@@ -25,6 +25,7 @@ public class app {
         c.myPrinterString(c.checkNames(listNames));
         c.myPrinterBool(c.checkListsCircle(listChar1, listChar2));
         c.myPrinterInt(c.reverceNum(listInt1));
+        c.myPrinterInt(c.addUpLists(listInt1, listInt2));
         c.myPrinterInt(c.notBiggerThanNum(14, listInt3));
     }
 
