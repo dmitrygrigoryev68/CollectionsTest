@@ -42,16 +42,12 @@ public class Collection {
     }
 
     public void myPrinterInt(List<Integer> list) {
-        for (Integer l : list) {
-            System.out.println(l);
-        }
+        for (Integer l : list) System.out.println(l);
         System.out.println("\n");
     }
 
     public void myPrinterString(List<String> list) {
-        for (String l : list) {
-            System.out.println(l);
-        }
+        for (String l : list) System.out.println(l);
         System.out.println("\n");
     }
 
@@ -59,6 +55,4 @@ public class Collection {
         System.out.println(bool);
         System.out.println("\n");
     }
-
 }
-
