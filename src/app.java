@@ -21,12 +21,19 @@ public class app {
 
         Collection c = new Collection();
 
-        c.myPrinterString(c.compareLists(listInt1, listInt2));
-        c.myPrinterString(c.checkNames(listNames));
-        c.myPrinterBool(c.checkListsCircle(listChar1, listChar2));
-        c.myPrinterInt(c.reverceNum(listInt1));
-        c.myPrinterInt(c.addUpLists(listInt1, listInt2));
-        c.myPrinterInt(c.notBiggerThanNum(14, listInt3));
+        Printer <List<String>> stringComp = new Printer<>(c.compareLists(listInt1, listInt2));
+        Printer<Boolean> bool = new Printer<>(c.checkListsCircle(listChar1, listChar2));
+        Printer <List<String>> stringChek = new Printer<>(c.checkNames(listNames));
+        Printer<List<Integer>> integerRev = new Printer<>(c.reverceNum(listInt1));
+        Printer<List<Integer>> integerAddUp = new Printer<>(c.addUpLists(listInt1, listInt2));
+        Printer<List<Integer>> integerNotBig = new Printer<>(c.notBiggerThanNum(14, listInt3));
+
+        c.mySuperPrinter(stringComp);
+        c.mySuperPrinter(stringChek);
+        c.mySuperPrinter(bool);
+        c.mySuperPrinter(integerRev);
+        c.mySuperPrinter(integerAddUp);
+        c.mySuperPrinter(integerNotBig);
     }
 
 }

@@ -41,18 +41,10 @@ public class Collection {
         return list;
     }
 
-    public void myPrinterInt(List<Integer> list) {
-        for (Integer l : list) System.out.println(l);
+    public void mySuperPrinter(Object arg) {
+        System.out.println(arg);
         System.out.println("\n");
     }
 
-    public void myPrinterString(List<String> list) {
-        for (String l : list) System.out.println(l);
-        System.out.println("\n");
-    }
 
-    public void myPrinterBool(boolean bool) {
-        System.out.println(bool);
-        System.out.println("\n");
-    }
 }
