@@ -1,13 +1,23 @@
 import java.util.*;
 
-public class Collection {
+public class Collection<T> {
 
-    public List<String> compareLists(List<Integer> list1, List<Integer> list2) {
-        List<String> resList = new LinkedList<>();
+
+    List<T> elementsArr = new ArrayList<>();
+    T yes = (T) "yes";
+    T no = (T) "No";
+
+    public boolean addAllTest(int index, List<T> arrToAdd) {
+        elementsArr.addAll(index, arrToAdd);
+        return true;
+    }
+
+    public List<T> compareLists(List<T> list1, List<T> list2) {
+        List<T> resList = new LinkedList<>();
         for (int i = 0; i < list1.size(); i++)
             if (list1.get(i).equals(list2.get(i))) {
-                resList.add("Yes");
-            } else resList.add("No");
+                resList.add(yes);
+            } else resList.add(no);
         return resList;
     }
 
@@ -24,13 +34,13 @@ public class Collection {
         return false;
     }
 
-    public List<Integer> reverceNum(List<Integer> list) {
+    public List<T> reverceNum(List<T> list) {
         Collections.reverse(list);
         return list;
     }
 
-    public List<Integer> addUpLists(List<Integer> list1, List<Integer> list2) {
-        List<Integer> resList = new ArrayList<>();
+    public List<T> addUpLists(List<T> list1, List<T> list2) {
+        List<T> resList = new ArrayList<>();
         resList.addAll(list1);
         resList.addAll(list2);
         return resList;
@@ -41,10 +51,8 @@ public class Collection {
         return list;
     }
 
-    public void mySuperPrinter(Object arg) {
+    public void mySuperPrinter(T arg) {
         System.out.println(arg);
         System.out.println("\n");
     }
-
-
 }
